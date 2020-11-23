@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.bola{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid black;
+}
+
+
+.container{
+    width: 450px;
+    height: 450px;
+    border: 1px solid #000;
+    margin-left: 5px;
+    background-color: aqua;
+}
+
+.botoes{
+    display: flex;
+    margin-top: 10px;
+    width: 915px;
+    height: auto;
+    justify-content: space-between;
+    
+}
+
+.bot-command{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bot-speed{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bot-command label{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bot-speed label {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.pontos{
+    width: 450px;
+    height: 450px;
+    background-color: gray;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 450px;
+    font-size: 250px;
+    margin-left: 10px;
+}
+
+.topo{
+    display: flex;
+    width: 100%;
+}
+
+#dev{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+#nor{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+
+#rap{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+}

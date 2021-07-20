@@ -1,10 +1,11 @@
 var tmp;
 var bola;
+var container
 function adicionarBola(){
-    bola = document.createElement("div");
-
+    container = document.getElementById("container");
+    bola = document.createElement("img");
     
-    bola.setAttribute("class", "bola");
+    bola.setAttribute("src", "../balao.svg");
 
     var x = Math.floor(Math.random() * 400);
     var y = Math.floor(Math.random() * 400);
@@ -13,15 +14,15 @@ function adicionarBola(){
     var g = Math.floor(Math.random() * 254);
     var b = Math.floor(Math.random() * 254);
 
-    bola.setAttribute("style","left:"+x+"px;top:"+y+"px; background-color: rgb("+r+","+g+","+b+");");
+    bola.setAttribute("style","margin-left:"+x+"px;margin-top:"+y+"px; background-color: rgb("+r+","+g+","+b+");");
     bola.setAttribute("onclick", "estourar(this)");
 
-    document.body.appendChild(bola);
+    container.appendChild(bola);
     
 }
 
 function estourar(elemento){
-    document.body.removeChild(elemento);
+    container.removeChild(elemento);
     var p = parseInt(document.getElementById("pontos").innerHTML);
     p = p +1;
     document.getElementById("pontos").innerHTML = p;
@@ -32,13 +33,15 @@ function iniciar(){
     tmp = setInterval(adicionarBola, 700);
 }
 
+document.getElementById("start").disabled = true;
+
 
 function parar(){
     clearInterval(tmp);
 }
 
 function limpar(){
-    var bolas = document.querySelectorAll('.bola');
+    var bolas = document.querySelectorAll('img');
     bolas.forEach(estourar);
     document.getElementById('pontos').innerHTML = 0;
     parar();

@@ -12,7 +12,7 @@
     
 
 </head>
-<body onload="iniciar()">
+<body>
     <header>
         <h1>Estoure os balões</h1>
     </header>
@@ -23,15 +23,14 @@
     <div class="botoes">
         <div class="bot-command">
             <label>Comandos:</label>
-            <button onclick="parar()">Parar!</button>
-            <button onclick="iniciar()">Continuar!</button>
+            <div id="dibotao"><button onclick="removerContato(this)">Iniciar</button></div>
             <button onclick="limpar()" >Limpar!</button>
         </div>
         <div class="bot-speed">
             <label id="velo">Velocidade: <span id="dev">Devagar</span></label>
-            <button id="1" onclick="velocidade()">Devagar</button>
-            <button id="2" onclick="velocidade()">Normal</button>
-            <button id="3" onclick="velocidade()">Rápido</button>
+            <button id="1" onclick="velocidade(750)">Devagar</button>
+            <button id="2" onclick="velocidade(500)">Normal</button>
+            <button id="3" onclick="velocidade(200)">Rápido</button>
         </div>
     </div>
 </body>

@@ -5,7 +5,7 @@ function adicionarBola(){
     container = document.getElementById("container");
     bola = document.createElement("img");
     
-    bola.setAttribute("src", "../balao.svg");
+    bola.setAttribute("src", "./assets/images/balao.svg");
 
     var x = Math.floor(Math.random() * 400);
     var y = Math.floor(Math.random() * 400);
